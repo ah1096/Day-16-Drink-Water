@@ -11,10 +11,16 @@ const spout = document.getElementById('teapot-spout')
 const base = document.getElementById('teapot-base')
 const handle = document.getElementById('teapot-handle')
 
+const h1 = document.getElementById('h1')
+const text = document.querySelector('.text')
+
+
+
 
 
 button.addEventListener('click', () => vesselToggle())
 
+const setTheme = theme => document.documentElement.className = theme;
 
 function vesselToggle(){
 
@@ -24,12 +30,18 @@ function vesselToggle(){
         base.style.visibility = 'hidden'
         handle.style.visibility = 'hidden'
         button.innerText = 'teapot mode'
+        setTheme('water')
+
     } else {
         lid.style.visibility = 'visible'
         spout.style.visibility = 'visible'
         base.style.visibility = 'visible'
         handle.style.visibility = 'visible'
         button.innerText = 'water'
+
+        h1.innerText = 'Drink Tea'
+        text.innerText = 'Select how many cups of tea you have drank'
+        setTheme('tea')
     }
 
     vessel.classList.toggle('teapot')

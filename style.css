@@ -1,22 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
-:root {
-    --water-background: #3494e4;
-    --border-color: #144fc6;
-    --fill-color: #6ab3f8;
+:root,
+    :root.water {
+        --bg-color: #3494e4;
+        --border-color: #144fc6;
+        --fill-color: #6ab3f8;
+        --text-color: white;
+    }
+    :root.tea {
+        --bg-color: white;
+        --border-color: rgb(56, 110, 56);
+        --fill-color: rgb(107, 164, 107);
+        --text-color: rgb(107, 164, 107);
+    }
 
-    --tea-background: white;
-    --tea-border: rgb(56, 110, 56);
-    --tea-fill: rgb(107, 164, 107);
-}
 
 * {
     box-sizing: border-box;
 }
 
 body {
-    background-color: var(--water-background);
-    color: white;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     font-family: 'Montserrat';
     margin: 0;
     display: flex;
@@ -118,8 +123,8 @@ h3 {
 }
 
 .button {
-    background-color: var(--tea-fill);
-    border: 2px solid var(--tea-border);
+    background-color: var(--fill-color);
+    border: 2px solid var(--border-color);
     color: white;
     padding: 10px;
     border-radius: 25px;
@@ -127,8 +132,8 @@ h3 {
 
 .teapot {
     background-color: white;
-    border: 4px solid var(--tea-border);
-    color: var(--tea-border);
+    border: 4px solid var(--border-color);
+    color: var(--border-color);
     border-radius: 50% 50% 50% 50%;
     height: 330px;
     width: 330px;
@@ -150,8 +155,8 @@ h3 {
 
 #teapot-lid .circle {
     background-color: transparent;
-    border: 4px solid var(--tea-border);
-    color: var(--tea-border);
+    border: 4px solid var(--border-color);
+    color: var(--border-color);
     border-radius: 50% 50% 50% 50%;
     height: 30px;
     width: 30px;
@@ -159,17 +164,17 @@ h3 {
 
 #teapot-lid .bottom {
     background-color: transparent;
-    border: 4px solid var(--tea-border);
-    color: var(--tea-border);
+    border: 4px solid var(--border-color);
+    color: var(--border-color);
     border-radius: 50% 50% 15px 15px;
     height: 30px;
     width: 200px;
 }
 
 #teapot-spout {
-    background-color: var(--tea-background);
-    border: 4px solid var(--tea-border);
-    color: var(--tea-border);
+    background-color: var(--bg-color);
+    border: 4px solid var(--border-color);
+    color: var(--border-color);
     border-radius: 15px;
     height: 50px;
     width: 90px;
@@ -185,9 +190,9 @@ h3 {
 }
 
 #teapot-handle .outer {
-    background-color: var(--tea-background);
-    border: 4px solid var(--tea-border);
-    color: var(--tea-border);
+    background-color: var(--bg-color);
+    border: 4px solid var(--border-color);
+    color: var(--border-color);
     border-radius: 0 50% 50% 50% ;
     height: 150px;
     width: 150px;
@@ -200,9 +205,9 @@ h3 {
 }
 
 #teapot-handle .inner {
-    background-color: var(--tea-background);
-    border: 4px solid var(--tea-border);
-    color: var(--tea-border);
+    background-color: var(--bg-color);
+    border: 4px solid var(--border-color);
+    color: var(--border-color);
     border-radius: 0 50% 50% 50% ;
     height: 100px;
     width: 100px;
@@ -215,9 +220,9 @@ h3 {
 }
 
 #teapot-base {
-    background-color: var(--tea-background);
-    border: 4px solid var(--tea-border);
-    color: var(--tea-border);
+    background-color: var(--bg-color);
+    border: 4px solid var(--border-color);
+    color: var(--border-color);
     border-radius: 50% 50% 15px 15px;
     height: 30px;
     width: 200px;
