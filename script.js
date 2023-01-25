@@ -30,6 +30,9 @@ function vesselToggle(){
         base.style.visibility = 'hidden'
         handle.style.visibility = 'hidden'
         button.innerText = 'teapot mode'
+        
+        h1.innerText = 'Drink Water'
+        text.innerText = 'Select how many glasses of water you have drank'
         setTheme('water')
 
     } else {
