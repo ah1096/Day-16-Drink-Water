@@ -1,25 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
-:root {
-    --border-color: #144fc6;
-    --fill-color: #6ab3f8;
-}
+:root,
+    :root.water {
+        --bg-color: #3494e4;
+        --border-color: #144fc6;
+        --fill-color: #6ab3f8;
+        --text-color: white;
+    }
+    :root.tea {
+        --bg-color: white;
+        --border-color: rgb(56, 110, 56);
+        --fill-color: rgb(107, 164, 107);
+        --text-color: rgb(107, 164, 107);
+    }
+
 
 * {
     box-sizing: border-box;
 }
 
 body {
-    background-color: #3494e4;
-    color: white;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     font-family: 'Montserrat';
     margin: 0;
     display: flex;
     flex-direction: column;
-        /* aligns all elements on the page vertically */
     align-items: center;
-        /* centers the column in the middle of page */
     margin-bottom: 40px;
+    margin-top: 20px;
+    justify-content: center;
 }
 
 h1 {
@@ -31,6 +41,14 @@ h3 {
     margin: 10px 0;
 }
 
+.container2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-80px);
+}
+
 .cup {
     background-color: white;
     border: 4px solid var(--border-color);
@@ -38,7 +56,6 @@ h3 {
     border-radius: 0 0 40px 40px;
     height: 330px;
     width: 150px;
-    margin: 30px 0;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -46,8 +63,9 @@ h3 {
 
 .cup.cup-small {
     width: 50px;
-    height: 95px;
-    border-radius: 0 0 15px 15px;
+    height: 50px;
+    border-radius: 0 50% 50% 50%;
+    transform: rotate(45deg);
     background-color: rgba(255, 255, 255, 0.9);
     cursor: pointer;
     font-size: 14px;
@@ -56,6 +74,10 @@ h3 {
     text-align: center;
     margin: 5px;
     transition: 0.3s ease;
+}
+
+.cuptext {
+    transform: rotate(-45deg)
 }
 
 .cup.cup-small.full {
@@ -106,4 +128,130 @@ h3 {
     text-align: center;
     margin: 0 0 5px;
 }
+
+.button {
+    background-color: transparent;
+    border: 2px solid var(--border-color);
+    color: var(--text-color);
+    padding: 10px;
+    border-radius: 25px;
+}
+
+.teapot {
+    background-color: white;
+    border: 4px solid var(--border-color);
+    color: var(--border-color);
+    border-radius: 50% 50% 50% 50%;
+    height: 330px;
+    width: 330px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 1;
+}
+
+#teapot-lid {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(75px);
+    z-index: 2;
+}
+
+#teapot-lid .circle {
+    background-color: transparent;
+    border: 4px solid var(--border-color);
+    color: var(--border-color);
+    border-radius: 50% 50% 50% 50%;
+    height: 30px;
+    width: 30px;
+}
+
+#teapot-lid .bottom {
+    background-color: transparent;
+    border: 4px solid var(--border-color);
+    color: var(--border-color);
+    border-radius: 50% 50% 15px 15px;
+    height: 30px;
+    width: 200px;
+}
+
+#teapot-spout {
+    background-color: var(--bg-color);
+    border: 4px solid var(--border-color);
+    color: var(--border-color);
+    border-radius: 15px;
+    height: 50px;
+    width: 90px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 2;
+    transform: translate(-170px, 100px) rotate(45deg);
+}
+
+#teapot-handle {
+    transform: translate(160px, -230px);
+}
+
+#teapot-handle .outer {
+    background-color: var(--bg-color);
+    border: 4px solid var(--border-color);
+    color: var(--border-color);
+    border-radius: 0 50% 50% 50% ;
+    height: 150px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: -1;
+    transform: translate(10px, -30px) rotate(-45deg);
+    
+}
+
+#teapot-handle .inner {
+    background-color: var(--bg-color);
+    border: 4px solid var(--border-color);
+    color: var(--border-color);
+    border-radius: 0 50% 50% 50% ;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: -2;
+    transform: translate(35px, -155px) rotate(-45deg);
+    
+}
+
+#teapot-base {
+    background-color: var(--bg-color);
+    border: 4px solid var(--border-color);
+    color: var(--border-color);
+    border-radius: 50% 50% 15px 15px;
+    height: 30px;
+    width: 200px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transform: translateY(-20px);
+    z-index: -1;
+}
+
+.container {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transform: translateY(-220px);
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
 

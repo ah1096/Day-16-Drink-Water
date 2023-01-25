@@ -5,30 +5,82 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Drink Water</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💧</text></svg>">
+    <title>Drink Tracker</title>
 </head>
 <body>
-    <h1>Drink Water</h1>
+    <h1 id="h1">Drink Water</h1>
     <h3>Goal: 2 Liters</h3>
 
-    <div class="cup">
-        <div class="remained" id="remained">
-            <span id="liters">0</span>
-            <small>Remained</small>
-        </div>
-        <div class="percentage" id="percentage"> </div>
-    </div>
-    <p class="text">Select how many glasses of water you have drank.</p>
 
-    <div class="cups">
-        <div class="cup cup-small">250 ml</div>
-        <div class="cup cup-small">250 ml</div>
-        <div class="cup cup-small">250 ml</div>
-        <div class="cup cup-small">250 ml</div>
-        <div class="cup cup-small">250 ml</div>
-        <div class="cup cup-small">250 ml</div>
-        <div class="cup cup-small">250 ml</div>
-        <div class="cup cup-small">250 ml</div>
+    <div class="container2">
+        <div class="teapot-part" id="teapot-lid" style="
+            visibility: hidden;
+            ">
+            <div class="circle"></div>
+            <div class="bottom"></div>
+        </div>
+
+        <div class="teapot-part" id="teapot-spout" style="
+        visibility: hidden;
+        "></div>
+
+        <div class="cup" id="vessel">
+            <div class="remained" id="remained">
+                <span id="liters">0</span>
+                <small>Remaining</small>
+            </div>
+            <div class="percentage" id="percentage"> </div>
+        </div>
+
+        <div class="teapot-part" id="teapot-base" style="
+        visibility: hidden;
+        "> </div>
+
+        <div class="teapot-part" id="teapot-handle" style="
+        visibility: hidden;
+        ">
+            <div class="outer"></div>
+            <div class="inner"></div>
+        </div>
+
+        <div class="container">
+            <p class="text">Select how many glasses of water you have drank.</p>
+
+            <div class="cups">
+                <div class="cup cup-small">
+                    <p class="cuptext">250 ml</p>
+                </div>
+                <div class="cup cup-small">
+                    <p class="cuptext">250 ml</p>
+                </div>
+                <div class="cup cup-small">
+                    <p class="cuptext">250 ml</p>
+                </div>
+                <div class="cup cup-small">
+                    <p class="cuptext">250 ml</p>
+                </div>
+                <div class="cup cup-small">
+                    <p class="cuptext">250 ml</p>
+                </div>
+                <div class="cup cup-small">
+                    <p class="cuptext">250 ml</p>
+                </div>
+                <div class="cup cup-small">
+                    <p class="cuptext">250 ml</p>
+                </div>
+                <div class="cup cup-small">
+                    <p class="cuptext">250 ml</p>
+                </div>
+            </div>
+
+            <div class="toggleButton">
+                <button class="button" id="togglebutton">
+                    teapot mode
+                </button>
+            </div>
+
+        </div>
     </div>
 
     
