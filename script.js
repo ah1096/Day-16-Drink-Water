@@ -3,6 +3,38 @@ const liters = document.getElementById('liters')
 const percentage = document.getElementById('percentage')
 const remained = document.getElementById('remained')
 
+const button = document.getElementById('togglebutton')
+const vessel = document.getElementById('vessel')
+
+const lid = document.getElementById('teapot-lid')
+const spout = document.getElementById('teapot-spout')
+const base = document.getElementById('teapot-base')
+const handle = document.getElementById('teapot-handle')
+
+
+
+button.addEventListener('click', () => vesselToggle())
+
+
+function vesselToggle(){
+
+    if(vessel.classList.contains('teapot')){
+        lid.style.visibility = 'hidden'
+        spout.style.visibility = 'hidden'
+        base.style.visibility = 'hidden'
+        handle.style.visibility = 'hidden'
+        button.innerText = 'teapot mode'
+    } else {
+        lid.style.visibility = 'visible'
+        spout.style.visibility = 'visible'
+        base.style.visibility = 'visible'
+        handle.style.visibility = 'visible'
+        button.innerText = 'water'
+    }
+
+    vessel.classList.toggle('teapot')
+}
+
 updateBigCup()
 
 smallCups.forEach((cup, idx) => {
@@ -48,3 +80,5 @@ function updateBigCup() {
         liters.innerText = `${2 - (250 * fullCups / 1000)}`
     }
 }
+
+
